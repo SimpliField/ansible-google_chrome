@@ -1,0 +1,4 @@
+---
+google_chrome_release_channel: 'stable'
+google_chrome_package_name: 'google-chrome-{{ google_chrome_release_channel }}'
+google_chrome_download_url: 'https://dl.google.com/linux/direct/'
