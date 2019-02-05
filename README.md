@@ -23,6 +23,8 @@ Example Playbook
 ----------------
 
 ```yaml
+- roles:
+   - SimpliField.google_chrome
 ```
 
 License

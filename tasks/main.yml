@@ -4,16 +4,19 @@
   register: google_chrome_installed_version_reg
   changed_when: false
   failed_when: false
+  tags: [chrome]
 
 - name: download google chrome package
   get_url:
     url: "{{ google_chrome_download_url }}/{{ google_chrome_package_name }}_current_amd64.deb"
     dest: /tmp/
   when: google_chrome_installed_version_reg.rc == 1
+  tags: [chrome]
 
 - name: Install Google Chrome package
   apt:
     deb: "/tmp/{{ google_chrome_package_name }}_current_amd64.deb"
     state: present
   when: google_chrome_installed_version_reg.rc == 1
+  tags: [chrome]
 
